@@ -4,31 +4,31 @@ This is the Eye of Gnome, an image viewer program.  It is meant to be a
 fast and functional image viewer as well as an image cataloging program.
 
 Runtime requirements:
-  cygwin-1.5.20-1
+  cygwin-1.5.21-1
   GConf2-2.14.0-2
-  gtk2-x11-2.8.17-1
+  gtk2-x11-2.8.20-1
   lcms-1.14-1
   libX11_6-1.0.0-2
   libart_lgpl2-2.3.17-1
   libexif-0.6.12-1
-  libglade2-2.5.1-1
-  libgnome-desktop2-2.14.1-1
+  libglade2-2.6.0-1
+  libgnome-desktop2-2.14.2-1
   libgnome2-2.14.1-1
   libgnomeprint22-2.12.1-2
   libgnomeprintui22-2.12.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.20-1
+  cygwin-1.5.21-1
   autoconf2.5-2.59-2
   automake1.9-1.9.6-1
-  binutils-20050610-1
-  cygport-0.2.1-1
+  binutils-20060709-1
+  cygport-0.2.5-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
   intltool-0.35.0-1
   libtool1.5-1.5.22-1
-  make-3.80-1
+  make-3.81-1
   pkg-config-0.20-1
   scrollkeeper-0.3.14-2
   sed-4.1.5-1
@@ -42,15 +42,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack eog-2.14.2-1-src.tar.bz2
+  unpack eog-2.14.3-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./eog-2.14.2-1.cygport all
+  cygport ./eog-2.14.3-1.cygport all
 
 This will create:
-  /usr/src/eog-2.14.2-1-src.tar.bz2
-  /usr/src/eog-2.14.2-1.tar.bz2
+  /usr/src/eog-2.14.3-1-src.tar.bz2
+  /usr/src/eog-2.14.3-1.tar.bz2
 
 -------------------------------------------
 
@@ -61,17 +61,17 @@ Files included in the binary package:
   /etc/preremove/eog.sh
   /usr/bin/eog.exe
   /usr/share/applications/eog.desktop
-  /usr/share/doc/Cygwin/eog-2.14.2.README
-  /usr/share/doc/eog-2.14.2/AUTHORS
-  /usr/share/doc/eog-2.14.2/COPYING
-  /usr/share/doc/eog-2.14.2/ChangeLog
-  /usr/share/doc/eog-2.14.2/HACKING
-  /usr/share/doc/eog-2.14.2/INSTALL
-  /usr/share/doc/eog-2.14.2/MAINTAINERS
-  /usr/share/doc/eog-2.14.2/NEWS
-  /usr/share/doc/eog-2.14.2/README
-  /usr/share/doc/eog-2.14.2/THANKS
-  /usr/share/doc/eog-2.14.2/TODO
+  /usr/share/doc/Cygwin/eog-2.14.3.README
+  /usr/share/doc/eog-2.14.3/AUTHORS
+  /usr/share/doc/eog-2.14.3/COPYING
+  /usr/share/doc/eog-2.14.3/ChangeLog
+  /usr/share/doc/eog-2.14.3/HACKING
+  /usr/share/doc/eog-2.14.3/INSTALL
+  /usr/share/doc/eog-2.14.3/MAINTAINERS
+  /usr/share/doc/eog-2.14.3/NEWS
+  /usr/share/doc/eog-2.14.3/README
+  /usr/share/doc/eog-2.14.3/THANKS
+  /usr/share/doc/eog-2.14.3/TODO
   /usr/share/eog/eog-gtk-ui.xml
   /usr/share/eog/glade/eog.glade
   /usr/share/gnome/help/eog/C/eog.xml
@@ -217,6 +217,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.14.3-1 -----
+Version bump.
 
 ----- version 2.14.2-1 -----
 Version bump.
