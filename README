@@ -4,34 +4,34 @@ This is the Eye of Gnome, an image viewer program.  It is meant to be a
 fast and functional image viewer as well as an image cataloging program.
 
 Runtime requirements:
-  cygwin-1.5.21-1
-  GConf2-2.14.0-2
-  gtk2-x11-2.8.20-1
+  cygwin-1.5.22-1
+  GConf2-2.16.0-1
+  gtk2-x11-2.10.6-1
   lcms-1.14-1
-  libX11_6-1.0.0-2
+  libX11_6-1.1.1-1
   libart_lgpl2-2.3.17-1
   libexif-0.6.12-1
   libglade2-2.6.0-1
-  libgnome-desktop2-2.14.2-1
-  libgnome2-2.14.1-1
+  libgnome-desktop2-2.16.2-1
+  libgnome2-2.16.0-1
   libgnomeprint22-2.12.1-2
   libgnomeprintui22-2.12.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.21-1
-  autoconf2.5-2.59-2
+  cygwin-1.5.22-1
+  autoconf2.5-2.60-1
   automake1.9-1.9.6-1
-  binutils-20060709-1
-  cygport-0.2.5-1
+  binutils-20060817-1
+  cygport-0.2.7-1
   gawk-3.1.5-2
   gcc-core-3.4.4-1
   intltool-0.35.0-1
-  libtool1.5-1.5.22-1
+  libtool1.5-1.5.23a-1
   make-3.81-1
-  pkg-config-0.20-1
+  pkg-config-0.21-1
   scrollkeeper-0.3.14-2
-  sed-4.1.5-1
+  sed-4.1.5-2
 
 Canonical homepage:
   http://www.gnome.org/
@@ -42,15 +42,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack eog-2.14.3-1-src.tar.bz2
+  unpack eog-2.16.2-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./eog-2.14.3-1.cygport all
+  cygport ./eog-2.16.2-1.cygport all
 
 This will create:
-  /usr/src/eog-2.14.3-1-src.tar.bz2
-  /usr/src/eog-2.14.3-1.tar.bz2
+  /usr/src/eog-2.16.2-1-src.tar.bz2
+  /usr/src/eog-2.16.2-1.tar.bz2
 
 -------------------------------------------
 
@@ -61,17 +61,17 @@ Files included in the binary package:
   /etc/preremove/eog.sh
   /usr/bin/eog.exe
   /usr/share/applications/eog.desktop
-  /usr/share/doc/Cygwin/eog-2.14.3.README
-  /usr/share/doc/eog-2.14.3/AUTHORS
-  /usr/share/doc/eog-2.14.3/COPYING
-  /usr/share/doc/eog-2.14.3/ChangeLog
-  /usr/share/doc/eog-2.14.3/HACKING
-  /usr/share/doc/eog-2.14.3/INSTALL
-  /usr/share/doc/eog-2.14.3/MAINTAINERS
-  /usr/share/doc/eog-2.14.3/NEWS
-  /usr/share/doc/eog-2.14.3/README
-  /usr/share/doc/eog-2.14.3/THANKS
-  /usr/share/doc/eog-2.14.3/TODO
+  /usr/share/doc/Cygwin/eog-2.16.2.README
+  /usr/share/doc/eog-2.16.2/AUTHORS
+  /usr/share/doc/eog-2.16.2/COPYING
+  /usr/share/doc/eog-2.16.2/ChangeLog
+  /usr/share/doc/eog-2.16.2/HACKING
+  /usr/share/doc/eog-2.16.2/INSTALL
+  /usr/share/doc/eog-2.16.2/MAINTAINERS
+  /usr/share/doc/eog-2.16.2/NEWS
+  /usr/share/doc/eog-2.16.2/README
+  /usr/share/doc/eog-2.16.2/THANKS
+  /usr/share/doc/eog-2.16.2/TODO
   /usr/share/eog/eog-gtk-ui.xml
   /usr/share/eog/glade/eog.glade
   /usr/share/gnome/help/eog/C/eog.xml
@@ -82,14 +82,14 @@ Files included in the binary package:
   /usr/share/gnome/help/eog/de/figures/eog_start_window.png
   /usr/share/gnome/help/eog/de/legal.xml
   /usr/share/gnome/help/eog/es/eog.xml
+  /usr/share/gnome/help/eog/es/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/es/figures/eog_start_window.png
-  /usr/share/gnome/help/eog/es/legal.xml
   /usr/share/gnome/help/eog/eu/eog.xml
   /usr/share/gnome/help/eog/eu/figures/eog_start_window.png
   /usr/share/gnome/help/eog/eu/legal.xml
   /usr/share/gnome/help/eog/fr/eog.xml
+  /usr/share/gnome/help/eog/fr/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/fr/figures/eog_start_window.png
-  /usr/share/gnome/help/eog/fr/legal.xml
   /usr/share/gnome/help/eog/it/eog.xml
   /usr/share/gnome/help/eog/it/figures/eog_start_window.png
   /usr/share/gnome/help/eog/it/legal.xml
@@ -100,12 +100,11 @@ Files included in the binary package:
   /usr/share/gnome/help/eog/ko/figures/eog_start_window.png
   /usr/share/gnome/help/eog/ko/legal.xml
   /usr/share/gnome/help/eog/sv/eog.xml
+  /usr/share/gnome/help/eog/sv/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/sv/figures/eog_start_window.png
-  /usr/share/gnome/help/eog/sv/legal.xml
   /usr/share/gnome/help/eog/uk/eog.xml
   /usr/share/gnome/help/eog/uk/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/uk/figures/eog_start_window.png
-  /usr/share/gnome/help/eog/uk/legal.xml
   /usr/share/gnome/help/eog/zh_CN/eog.xml
   /usr/share/gnome/help/eog/zh_CN/figures/eog_start_window.png
   /usr/share/gnome/help/eog/zh_CN/legal.xml
@@ -119,7 +118,7 @@ Files included in the binary package:
   /usr/share/locale/be/LC_MESSAGES/eog.mo
   /usr/share/locale/bg/LC_MESSAGES/eog.mo
   /usr/share/locale/bn/LC_MESSAGES/eog.mo
-  /usr/share/locale/br/LC_MESSAGES/eog.mo
+  /usr/share/locale/bn_IN/LC_MESSAGES/eog.mo
   /usr/share/locale/bs/LC_MESSAGES/eog.mo
   /usr/share/locale/ca/LC_MESSAGES/eog.mo
   /usr/share/locale/cs/LC_MESSAGES/eog.mo
@@ -153,6 +152,7 @@ Files included in the binary package:
   /usr/share/locale/ku/LC_MESSAGES/eog.mo
   /usr/share/locale/lt/LC_MESSAGES/eog.mo
   /usr/share/locale/lv/LC_MESSAGES/eog.mo
+  /usr/share/locale/mg/LC_MESSAGES/eog.mo
   /usr/share/locale/mk/LC_MESSAGES/eog.mo
   /usr/share/locale/ml/LC_MESSAGES/eog.mo
   /usr/share/locale/mn/LC_MESSAGES/eog.mo
@@ -161,7 +161,6 @@ Files included in the binary package:
   /usr/share/locale/ne/LC_MESSAGES/eog.mo
   /usr/share/locale/nl/LC_MESSAGES/eog.mo
   /usr/share/locale/nn/LC_MESSAGES/eog.mo
-  /usr/share/locale/no/LC_MESSAGES/eog.mo
   /usr/share/locale/nso/LC_MESSAGES/eog.mo
   /usr/share/locale/or/LC_MESSAGES/eog.mo
   /usr/share/locale/pa/LC_MESSAGES/eog.mo
@@ -217,6 +216,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.16.2-1 -----
+Version bump for GNOME 2.16.
 
 ----- version 2.14.3-1 -----
 Version bump.
