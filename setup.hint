@@ -1,5 +1,5 @@
 category: Gnome Graphics
-requires: cygwin GConf2 gtk2-x11 libX11_6 libart_lgpl2 libexif libglade2 libgnome2 libgnomecanvas2 libgnomeprint22 libgnomeprintui22 libgnomeui2 liblcms1
+requires: cygwin GConf2 glib2 gtk2-x11 libX11_6 libart_lgpl2 libexif12 libglade2 libgnome-desktop2 libgnome2 libgnomecanvas2 libgnomeui2 libintl8 libjpeg62 liblcms1 pango
 sdesc: "Eye of GNOME image viewer"
 ldesc: "This is the Eye of Gnome, an image viewer program.  It is meant
 to be a fast and functional image viewer as well as an image cataloging
