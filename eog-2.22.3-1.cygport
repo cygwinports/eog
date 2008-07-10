@@ -1,0 +1,3 @@
+inherit gnome2
+
+DESCRIPTION="Eye of GNOME image viewer"
