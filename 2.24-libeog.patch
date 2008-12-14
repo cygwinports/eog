@@ -1,12 +1,12 @@
---- origsrc/eog-2.22.3/data/eog.pc.in	2008-03-10 09:04:09.000000000 -0500
-+++ src/eog-2.22.3/data/eog.pc.in	2008-07-09 04:03:51.640625000 -0500
+--- origsrc/eog-2.24.2/data/eog.pc.in	2008-10-20 11:31:55.000000000 -0500
++++ src/eog-2.24.2/data/eog.pc.in	2008-12-14 14:39:21.931375000 -0600
 @@ -9,3 +9,4 @@
  Requires: gtk+-2.0, libgnomeui-2.0 libglade-2.0, gnome-vfs-2.0, gconf-2.0
  Version: @VERSION@
  Cflags: -I${includedir}
 +Libs: -L${libdir} -leog
---- origsrc/eog-2.22.3/jpegutils/Makefile.am	2008-03-10 09:04:21.000000000 -0500
-+++ src/eog-2.22.3/jpegutils/Makefile.am	2008-07-09 04:03:51.656250000 -0500
+--- origsrc/eog-2.24.2/jpegutils/Makefile.am	2008-10-20 11:31:55.000000000 -0500
++++ src/eog-2.24.2/jpegutils/Makefile.am	2008-12-14 14:39:21.947000000 -0600
 @@ -1,9 +1,9 @@
  INCLUDES = $(EOG_CFLAGS) \
  	$(EXIF_CFLAGS)
@@ -19,22 +19,8 @@
  	transupp.c			\
  	transupp.h
  
---- origsrc/eog-2.22.3/jpegutils/transupp.c	2008-03-10 09:04:21.000000000 -0500
-+++ src/eog-2.22.3/jpegutils/transupp.c	2008-07-09 04:03:51.890625000 -0500
-@@ -51,6 +51,11 @@
- #define MAX(a, b)  (((a) > (b)) ? (a) : (b))
- #endif
- 
-+#ifdef __CYGWIN__
-+#define height_in_blocks height_in_data_units
-+#define width_in_blocks width_in_data_units
-+#endif
-+
- enum {
-   JERR_CONVERSION_NOTIMPL
- };
---- origsrc/eog-2.22.3/src/Makefile.am	2008-03-10 09:04:00.000000000 -0500
-+++ src/eog-2.22.3/src/Makefile.am	2008-07-09 04:03:51.921875000 -0500
+--- origsrc/eog-2.24.2/src/Makefile.am	2008-10-20 11:31:54.000000000 -0500
++++ src/eog-2.24.2/src/Makefile.am	2008-12-14 14:39:21.993875000 -0600
 @@ -1,15 +1,12 @@
  if ENABLE_JPEG
 -jpeg_LIB = -L$(top_builddir)/jpegutils -leog-jpegutils
@@ -55,20 +41,21 @@
  
  bin_PROGRAMS = eog
  
-@@ -128,10 +125,12 @@
+@@ -135,11 +132,13 @@
  endif
  
  if HAVE_EXEMPI
 +if !HAVE_EXIF
+ INST_H_FILES +=				\
+ 	eog-exif-details.h
  libeog_la_SOURCES +=			\
- 	eog-exif-details.h		\
  	eog-exif-details.c
  endif
 +endif
  
  libeog_la_CFLAGS =						\
  	$(EOG_CFLAGS)						\
-@@ -147,6 +146,10 @@
+@@ -155,6 +154,10 @@
  	-DEOG_PLUGIN_DIR=\""$(libdir)/eog/plugins"\"
  
  libeog_la_LIBADD = \
@@ -76,10 +63,10 @@
 +	$(toolbar_LIB)			\
 +	$(screensaver_LIB)		\
 +	$(jpeg_LIB)			\
- 	$(EOG_LIBS)
+ 	$(EOG_LIBS) \
+ 	-lz
  
- if ENABLE_PYTHON
-@@ -164,12 +167,6 @@
+@@ -173,12 +176,6 @@
  
  eog_SOURCES = main.c
  
@@ -92,7 +79,7 @@
  eog_CFLAGS = 							\
  	$(EOG_CFLAGS)						\
  	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
-@@ -180,11 +177,7 @@
+@@ -189,11 +186,7 @@
  eog_LDADD = 				\
  	libeog.la			\
  	$(EOG_LIBS)			\
@@ -104,4 +91,46 @@
 +	$(X_LIBS)
  
  eog_LDFLAGS = -export-dynamic -no-undefined -export-symbols-regex "^[[^_]].*"
+ 
+--- origsrc/eog-2.24.2/plugins/fullscreen/Makefile.am	2008-10-20 11:31:53.000000000 -0500
++++ src/eog-2.24.2/plugins/fullscreen/Makefile.am	2008-12-14 15:39:58.587625000 -0600
+@@ -14,9 +14,9 @@
+ 	eog-fullscreen-plugin.c	
+ 
+ libfullscreen_la_LDFLAGS = \
+-	-avoid-version -module
++	-avoid-version -module -no-undefined
+ 
+-libfullscreen_la_LIBADD = $(EOG_LIBS)
++libfullscreen_la_LIBADD = $(top_builddir)/src/libeog.la $(EOG_LIBS)
+ 
+ # Plugin Info
+ 
+--- origsrc/eog-2.24.2/plugins/reload/Makefile.am	2008-10-20 11:31:54.000000000 -0500
++++ src/eog-2.24.2/plugins/reload/Makefile.am	2008-12-14 15:40:14.447000000 -0600
+@@ -14,9 +14,9 @@
+ 	eog-reload-plugin.c	
+ 
+ libreload_la_LDFLAGS = \
+-	-avoid-version -module
++	-avoid-version -module -no-undefined
+ 
+-libreload_la_LIBADD = $(EOG_LIBS)
++libreload_la_LIBADD = $(top_builddir)/src/libeog.la $(EOG_LIBS)
+ 
+ # Plugin Info
+ 
+--- origsrc/eog-2.24.2/plugins/statusbar-date/Makefile.am	2008-10-20 11:31:54.000000000 -0500
++++ src/eog-2.24.2/plugins/statusbar-date/Makefile.am	2008-12-14 15:40:22.634500000 -0600
+@@ -13,9 +13,9 @@
+ 	eog-statusbar-date-plugin.c	
+ 
+ libstatusbar_date_la_LDFLAGS = \
+-	-avoid-version -module
++	-avoid-version -module -no-undefined
+ 
+-libstatusbar_date_la_LIBADD = $(EOG_LIBS)
++libstatusbar_date_la_LIBADD = $(top_builddir)/src/libeog.la $(EOG_LIBS)
+ 
+ # Plugin Info
  

@@ -1,3 +1,8 @@
 inherit gnome2
 
 DESCRIPTION="Eye of GNOME image viewer"
+
+PATCH_URI="
+	2.24-libeog.patch
+	2.22-transupp.patch
+"

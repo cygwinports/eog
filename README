@@ -5,45 +5,44 @@ fast and functional image viewer as well as an image cataloging program.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  GConf2-2.22.0-1
-  gdk-pixbuf2-2.12.10-1
-  glib2-2.16.3-1
-  gnome-vfs2-2.22.0-1
-  gtk2-x11-2.12.10-1
-  libX11_6-1.1.3-1
-  libart_lgpl2-2.3.20-1
-  libcairo2-1.6.4-1
+  libcairo2-1.8.4-1
   libdbus-glib_1_2-0.76-1
   libexempi3-2.0.1-1
-  libexif12-0.6.16-2
-  libglade2-2.6.2-1
-  libgnome-desktop2-2.22.3-1
-  libgnome2-2.22.0-1
-  libgnomeui2-2.22.1-1
-  libintl8-0.15-1
+  libexif12-0.6.17-1
+  libgconf2_4-2.24.0-1
+  libgdk_pixbuf2.0_0-2.14.5-1
+  libglade2.0_0-2.6.3-2
+  libglib2.0_0-2.18.3-1
+  libgnome-desktop2_7-2.24.2-1
+  libgnome2_0-2.24.1-1
+  libgnomeui2_0-2.24.0-1
+  libgtk2.0_0-2.14.5-1
+  libintl8-0.17-2
   libjpeg62-6b-12
   liblcms1-1.17-1
-  libxml2-2.6.32-1
-  python-2.5.2-2
-  python-gnomevfs2-2.22.1-1
-  python-gobject2-2.14.2-1
-  python-gtk2-2.12.1-1
+  libX11_6-1.1.5-1
+  libxml2-2.7.2-1
+  python-2.5.2-4
+  python-gnomevfs2-2.22.3-1
+  python-gobject2-2.15.4-1
+  python-gtk2-2.13.0-1
+  zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.61-1
-  automake1.10-1.10.1-1
-  binutils-20060817-1
-  cygport-0.3.12-1
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.3-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
-  gnome-common-2.20.0-2
-  gnome-doc-utils-0.12.2-1
-  intltool-0.37.1-1
-  libtool-2.2.2-2
+  gnome-common-2.24.0-1
+  gnome-doc-utils-0.14.0-1
+  intltool-0.40.5-1
+  libtool-2.2.6a-1
   make-3.81-1
   pkg-config-0.23a-2
-  rarian-0.8.0-1
+  rarian-0.8.1-1
   sed-4.1.5-2
 
 Canonical homepage:
@@ -55,15 +54,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack eog-2.22.3-1-src.tar.bz2
+  unpack eog-2.24.2-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./eog-2.22.3-1.cygport all
+  cygport ./eog-2.24.2-1.cygport all
 
 This will create:
-  /usr/src/eog-2.22.3-1-src.tar.bz2
-  /usr/src/eog-2.22.3-1.tar.bz2
+  /usr/src/eog-2.24.2-1-src.tar.bz2
+  /usr/src/eog-2.24.2-1.tar.bz2
 
 -------------------------------------------
 
@@ -78,6 +77,8 @@ Files included in the binary package:
   /usr/include/eog-2.20/eog/eog-debug.h
   /usr/include/eog-2.20/eog/eog-dialog.h
   /usr/include/eog-2.20/eog/eog-error-message-area.h
+  /usr/include/eog-2.20/eog/eog-exif-details.h
+  /usr/include/eog-2.20/eog/eog-exif-util.h
   /usr/include/eog-2.20/eog/eog-file-chooser.h
   /usr/include/eog-2.20/eog/eog-image-save-info.h
   /usr/include/eog-2.20/eog/eog-image.h
@@ -95,20 +96,29 @@ Files included in the binary package:
   /usr/include/eog-2.20/eog/eog-thumbnail.h
   /usr/include/eog-2.20/eog/eog-transform.h
   /usr/include/eog-2.20/eog/eog-window.h
+  /usr/lib/eog/plugins/cygfullscreen.dll
+  /usr/lib/eog/plugins/cygreload.dll
+  /usr/lib/eog/plugins/cygstatusbar-date.dll
+  /usr/lib/eog/plugins/fullscreen.eog-plugin
+  /usr/lib/eog/plugins/libfullscreen.la
+  /usr/lib/eog/plugins/libreload.la
+  /usr/lib/eog/plugins/libstatusbar-date.la
+  /usr/lib/eog/plugins/reload.eog-plugin
+  /usr/lib/eog/plugins/statusbar-date.eog-plugin
   /usr/lib/libeog.dll.a
   /usr/lib/libeog.la
   /usr/lib/pkgconfig/eog.pc
   /usr/share/applications/eog.desktop
-  /usr/share/doc/eog-2.22.3/AUTHORS
-  /usr/share/doc/eog-2.22.3/COPYING
-  /usr/share/doc/eog-2.22.3/ChangeLog
-  /usr/share/doc/eog-2.22.3/HACKING
-  /usr/share/doc/eog-2.22.3/INSTALL
-  /usr/share/doc/eog-2.22.3/MAINTAINERS
-  /usr/share/doc/eog-2.22.3/NEWS
-  /usr/share/doc/eog-2.22.3/README
-  /usr/share/doc/eog-2.22.3/THANKS
-  /usr/share/doc/eog-2.22.3/TODO
+  /usr/share/doc/eog-2.24.2/AUTHORS
+  /usr/share/doc/eog-2.24.2/COPYING
+  /usr/share/doc/eog-2.24.2/ChangeLog
+  /usr/share/doc/eog-2.24.2/HACKING
+  /usr/share/doc/eog-2.24.2/INSTALL
+  /usr/share/doc/eog-2.24.2/MAINTAINERS
+  /usr/share/doc/eog-2.24.2/NEWS
+  /usr/share/doc/eog-2.24.2/README
+  /usr/share/doc/eog-2.24.2/THANKS
+  /usr/share/doc/eog-2.24.2/TODO
   /usr/share/eog/eog-image-properties-dialog.glade
   /usr/share/eog/eog-multiple-save-as-dialog.glade
   /usr/share/eog/eog-preferences-dialog.glade
@@ -117,19 +127,33 @@ Files included in the binary package:
   /usr/share/eog/gtkrc
   /usr/share/eog/icons/hicolor/16x16/actions/eog-image-collection.png
   /usr/share/eog/icons/hicolor/16x16/actions/eog-plugin.png
+  /usr/share/eog/icons/hicolor/16x16/actions/slideshow-play.png
   /usr/share/eog/icons/hicolor/22x22/actions/eog-image-collection.png
   /usr/share/eog/icons/hicolor/22x22/actions/eog-plugin.png
+  /usr/share/eog/icons/hicolor/22x22/actions/slideshow-play.png
   /usr/share/eog/icons/hicolor/24x24/actions/eog-image-collection.png
+  /usr/share/eog/icons/hicolor/24x24/actions/slideshow-play.png
   /usr/share/eog/icons/hicolor/32x32/actions/eog-image-collection.png
   /usr/share/eog/icons/hicolor/32x32/actions/eog-plugin.png
+  /usr/share/eog/icons/hicolor/32x32/actions/slideshow-play.png
+  /usr/share/eog/icons/hicolor/48x48/actions/slideshow-play.png
   /usr/share/eog/icons/hicolor/scalable/actions/eog-image-collection.svg
   /usr/share/eog/icons/hicolor/scalable/actions/eog-plugin.svg
+  /usr/share/eog/icons/hicolor/scalable/actions/slideshow-play.svg
   /usr/share/eog/pixmaps/thumbnail-frame.png
   /usr/share/gnome/help/eog/C/eog.xml
   /usr/share/gnome/help/eog/C/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/C/figures/eog_start_window.png
   /usr/share/gnome/help/eog/C/figures/eog_toolbar_editor_window.png
   /usr/share/gnome/help/eog/C/legal.xml
+  /usr/share/gnome/help/eog/ar/eog.xml
+  /usr/share/gnome/help/eog/ar/figures/eog_save_as_window.png
+  /usr/share/gnome/help/eog/ar/figures/eog_start_window.png
+  /usr/share/gnome/help/eog/ar/figures/eog_toolbar_editor_window.png
+  /usr/share/gnome/help/eog/ca/eog.xml
+  /usr/share/gnome/help/eog/ca/figures/eog_save_as_window.png
+  /usr/share/gnome/help/eog/ca/figures/eog_start_window.png
+  /usr/share/gnome/help/eog/ca/figures/eog_toolbar_editor_window.png
   /usr/share/gnome/help/eog/da/eog.xml
   /usr/share/gnome/help/eog/da/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/da/figures/eog_start_window.png
@@ -186,6 +210,10 @@ Files included in the binary package:
   /usr/share/gnome/help/eog/sv/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/sv/figures/eog_start_window.png
   /usr/share/gnome/help/eog/sv/figures/eog_toolbar_editor_window.png
+  /usr/share/gnome/help/eog/th/eog.xml
+  /usr/share/gnome/help/eog/th/figures/eog_save_as_window.png
+  /usr/share/gnome/help/eog/th/figures/eog_start_window.png
+  /usr/share/gnome/help/eog/th/figures/eog_toolbar_editor_window.png
   /usr/share/gnome/help/eog/uk/eog.xml
   /usr/share/gnome/help/eog/uk/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/uk/figures/eog_start_window.png
@@ -198,6 +226,63 @@ Files included in the binary package:
   /usr/share/gnome/help/eog/zh_TW/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/zh_TW/figures/eog_start_window.png
   /usr/share/gnome/help/eog/zh_TW/figures/eog_toolbar_editor_window.png
+  /usr/share/gtk-doc/html/eog/EogApplication.html
+  /usr/share/gtk-doc/html/eog/EogDialog.html
+  /usr/share/gtk-doc/html/eog/EogExifDetails.html
+  /usr/share/gtk-doc/html/eog/EogFileChooser.html
+  /usr/share/gtk-doc/html/eog/EogImage.html
+  /usr/share/gtk-doc/html/eog/EogImageSaveInfo.html
+  /usr/share/gtk-doc/html/eog/EogJobSaveAs.html
+  /usr/share/gtk-doc/html/eog/EogListStore.html
+  /usr/share/gtk-doc/html/eog/EogMessageArea.html
+  /usr/share/gtk-doc/html/eog/EogMetadataReaderJpg.html
+  /usr/share/gtk-doc/html/eog/EogMetadataReaderPng.html
+  /usr/share/gtk-doc/html/eog/EogPixbufCellRenderer.html
+  /usr/share/gtk-doc/html/eog/EogPlugin.html
+  /usr/share/gtk-doc/html/eog/EogPluginManager.html
+  /usr/share/gtk-doc/html/eog/EogPreferencesDialog.html
+  /usr/share/gtk-doc/html/eog/EogPrintImageSetup.html
+  /usr/share/gtk-doc/html/eog/EogPrintPreview.html
+  /usr/share/gtk-doc/html/eog/EogPropertiesDialog.html
+  /usr/share/gtk-doc/html/eog/EogScrollView.html
+  /usr/share/gtk-doc/html/eog/EogSidebar.html
+  /usr/share/gtk-doc/html/eog/EogStatusbar.html
+  /usr/share/gtk-doc/html/eog/EogThumbNav.html
+  /usr/share/gtk-doc/html/eog/EogThumbView.html
+  /usr/share/gtk-doc/html/eog/EogTransform.html
+  /usr/share/gtk-doc/html/eog/EogURIConverter.html
+  /usr/share/gtk-doc/html/eog/EogWindow.html
+  /usr/share/gtk-doc/html/eog/ch01.html
+  /usr/share/gtk-doc/html/eog/ch02.html
+  /usr/share/gtk-doc/html/eog/ch03.html
+  /usr/share/gtk-doc/html/eog/ch04.html
+  /usr/share/gtk-doc/html/eog/ch05.html
+  /usr/share/gtk-doc/html/eog/ch06.html
+  /usr/share/gtk-doc/html/eog/ch07.html
+  /usr/share/gtk-doc/html/eog/eog-eog-config-keys.html
+  /usr/share/gtk-doc/html/eog/eog-eog-debug.html
+  /usr/share/gtk-doc/html/eog/eog-eog-error-message-area.html
+  /usr/share/gtk-doc/html/eog/eog-eog-exif-util.html
+  /usr/share/gtk-doc/html/eog/eog-eog-job-queue.html
+  /usr/share/gtk-doc/html/eog/eog-eog-metadata-reader.html
+  /usr/share/gtk-doc/html/eog/eog-eog-pixbuf-util.html
+  /usr/share/gtk-doc/html/eog/eog-eog-plugin-engine.html
+  /usr/share/gtk-doc/html/eog/eog-eog-print.html
+  /usr/share/gtk-doc/html/eog/eog-eog-save-as-dialog-helper.html
+  /usr/share/gtk-doc/html/eog/eog-eog-session.html
+  /usr/share/gtk-doc/html/eog/eog-eog-thumbnail.html
+  /usr/share/gtk-doc/html/eog/eog-eog-util.html
+  /usr/share/gtk-doc/html/eog/eog-uta.html
+  /usr/share/gtk-doc/html/eog/eog-zoom.html
+  /usr/share/gtk-doc/html/eog/eog.devhelp
+  /usr/share/gtk-doc/html/eog/eog.devhelp2
+  /usr/share/gtk-doc/html/eog/home.png
+  /usr/share/gtk-doc/html/eog/index.html
+  /usr/share/gtk-doc/html/eog/index.sgml
+  /usr/share/gtk-doc/html/eog/left.png
+  /usr/share/gtk-doc/html/eog/right.png
+  /usr/share/gtk-doc/html/eog/style.css
+  /usr/share/gtk-doc/html/eog/up.png
   /usr/share/icons/hicolor/16x16/apps/eog.png
   /usr/share/icons/hicolor/22x22/apps/eog.png
   /usr/share/icons/hicolor/24x24/apps/eog.png
@@ -229,6 +314,7 @@ Files included in the binary package:
   /usr/share/locale/fa/LC_MESSAGES/eog.mo
   /usr/share/locale/fi/LC_MESSAGES/eog.mo
   /usr/share/locale/fr/LC_MESSAGES/eog.mo
+  /usr/share/locale/fur/LC_MESSAGES/eog.mo
   /usr/share/locale/ga/LC_MESSAGES/eog.mo
   /usr/share/locale/gl/LC_MESSAGES/eog.mo
   /usr/share/locale/gu/LC_MESSAGES/eog.mo
@@ -243,6 +329,7 @@ Files included in the binary package:
   /usr/share/locale/ka/LC_MESSAGES/eog.mo
   /usr/share/locale/kn/LC_MESSAGES/eog.mo
   /usr/share/locale/ko/LC_MESSAGES/eog.mo
+  /usr/share/locale/ks/LC_MESSAGES/eog.mo
   /usr/share/locale/ku/LC_MESSAGES/eog.mo
   /usr/share/locale/lt/LC_MESSAGES/eog.mo
   /usr/share/locale/lv/LC_MESSAGES/eog.mo
@@ -261,6 +348,7 @@ Files included in the binary package:
   /usr/share/locale/or/LC_MESSAGES/eog.mo
   /usr/share/locale/pa/LC_MESSAGES/eog.mo
   /usr/share/locale/pl/LC_MESSAGES/eog.mo
+  /usr/share/locale/ps/LC_MESSAGES/eog.mo
   /usr/share/locale/pt/LC_MESSAGES/eog.mo
   /usr/share/locale/pt_BR/LC_MESSAGES/eog.mo
   /usr/share/locale/ro/LC_MESSAGES/eog.mo
@@ -271,7 +359,7 @@ Files included in the binary package:
   /usr/share/locale/sl/LC_MESSAGES/eog.mo
   /usr/share/locale/sq/LC_MESSAGES/eog.mo
   /usr/share/locale/sr/LC_MESSAGES/eog.mo
-  /usr/share/locale/sr@Latn/LC_MESSAGES/eog.mo
+  /usr/share/locale/sr@latin/LC_MESSAGES/eog.mo
   /usr/share/locale/sv/LC_MESSAGES/eog.mo
   /usr/share/locale/ta/LC_MESSAGES/eog.mo
   /usr/share/locale/te/LC_MESSAGES/eog.mo
@@ -288,6 +376,8 @@ Files included in the binary package:
   /usr/share/locale/zh_TW/LC_MESSAGES/eog.mo
   /usr/share/locale/zu/LC_MESSAGES/eog.mo
   /usr/share/omf/eog/eog-C.omf
+  /usr/share/omf/eog/eog-ar.omf
+  /usr/share/omf/eog/eog-ca.omf
   /usr/share/omf/eog/eog-da.omf
   /usr/share/omf/eog/eog-de.omf
   /usr/share/omf/eog/eog-en_GB.omf
@@ -302,6 +392,7 @@ Files included in the binary package:
   /usr/share/omf/eog/eog-pt_BR.omf
   /usr/share/omf/eog/eog-ru.omf
   /usr/share/omf/eog/eog-sv.omf
+  /usr/share/omf/eog/eog-th.omf
   /usr/share/omf/eog/eog-uk.omf
   /usr/share/omf/eog/eog-zh_CN.omf
   /usr/share/omf/eog/eog-zh_TW.omf
@@ -309,6 +400,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.24.2-1 -----
+Version bump for GNOME 2.24.
 
 ----- version 2.22.3-1 -----
 Version bump.
