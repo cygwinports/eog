@@ -5,27 +5,28 @@ fast and functional image viewer as well as an image cataloging program.
 
 Runtime requirements:
   cygwin-1.5.25-15
-  libcairo2-1.8.4-1
-  libdbus-glib_1_2-0.76-1
-  libexempi3-2.0.1-1
+  libart_lgpl_2_2-2.3.20-2
+  libcairo2-1.8.6-1
+  libdbus-glib_1_2-0.78-1
+  libexempi3-2.1.0-1
   libexif12-0.6.17-1
   libgconf2_4-2.24.0-1
-  libgdk_pixbuf2.0_0-2.14.5-1
+  libgdk_pixbuf2.0_0-2.14.7-1
   libglade2.0_0-2.6.3-2
-  libglib2.0_0-2.18.3-1
-  libgnome-desktop2_7-2.24.2-1
+  libglib2.0_0-2.18.4-1
+  libgnome-desktop2_7-2.24.3-1
   libgnome2_0-2.24.1-1
   libgnomeui2_0-2.24.0-1
-  libgtk2.0_0-2.14.5-1
+  libgtk2.0_0-2.14.7-1
   libintl8-0.17-2
   libjpeg62-6b-12
   liblcms1-1.17-1
-  libX11_6-1.1.5-1
-  libxml2-2.7.2-1
-  python-2.5.2-4
+  libX11_6-1.1.5-2
+  libxml2-2.7.3-1
+  python-2.5.4-1
   python-gnomevfs2-2.22.3-1
-  python-gobject2-2.15.4-1
-  python-gtk2-2.13.0-1
+  python-gobject2-2.16.0-1
+  python-gtk2-2.14.0-1
   zlib-1.2.3-2
 
 Build requirements:
@@ -37,7 +38,7 @@ Build requirements:
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gnome-common-2.24.0-1
-  gnome-doc-utils-0.14.0-1
+  gnome-doc-utils-0.14.2-1
   intltool-0.40.5-1
   libtool-2.2.6a-1
   make-3.81-1
@@ -54,15 +55,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack eog-2.24.2-1-src.tar.bz2
+  unpack eog-2.24.3-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./eog-2.24.2-1.cygport all
+  cygport ./eog-2.24.3-1.cygport all
 
 This will create:
-  /usr/src/eog-2.24.2-1-src.tar.bz2
-  /usr/src/eog-2.24.2-1.tar.bz2
+  /usr/src/eog-2.24.3-1-src.tar.bz2
+  /usr/src/eog-2.24.3-1.tar.bz2
+  /usr/src/eog-devel-2.24.3-1.tar.bz2
 
 -------------------------------------------
 
@@ -73,29 +75,6 @@ Files included in the binary package:
   /etc/preremove/eog.sh
   /usr/bin/cygeog-0.dll
   /usr/bin/eog.exe
-  /usr/include/eog-2.20/eog/eog-application.h
-  /usr/include/eog-2.20/eog/eog-debug.h
-  /usr/include/eog-2.20/eog/eog-dialog.h
-  /usr/include/eog-2.20/eog/eog-error-message-area.h
-  /usr/include/eog-2.20/eog/eog-exif-details.h
-  /usr/include/eog-2.20/eog/eog-exif-util.h
-  /usr/include/eog-2.20/eog/eog-file-chooser.h
-  /usr/include/eog-2.20/eog/eog-image-save-info.h
-  /usr/include/eog-2.20/eog/eog-image.h
-  /usr/include/eog-2.20/eog/eog-job-queue.h
-  /usr/include/eog-2.20/eog/eog-jobs.h
-  /usr/include/eog-2.20/eog/eog-list-store.h
-  /usr/include/eog-2.20/eog/eog-message-area.h
-  /usr/include/eog-2.20/eog/eog-plugin.h
-  /usr/include/eog-2.20/eog/eog-properties-dialog.h
-  /usr/include/eog-2.20/eog/eog-scroll-view.h
-  /usr/include/eog-2.20/eog/eog-sidebar.h
-  /usr/include/eog-2.20/eog/eog-statusbar.h
-  /usr/include/eog-2.20/eog/eog-thumb-nav.h
-  /usr/include/eog-2.20/eog/eog-thumb-view.h
-  /usr/include/eog-2.20/eog/eog-thumbnail.h
-  /usr/include/eog-2.20/eog/eog-transform.h
-  /usr/include/eog-2.20/eog/eog-window.h
   /usr/lib/eog/plugins/cygfullscreen.dll
   /usr/lib/eog/plugins/cygreload.dll
   /usr/lib/eog/plugins/cygstatusbar-date.dll
@@ -105,20 +84,17 @@ Files included in the binary package:
   /usr/lib/eog/plugins/libstatusbar-date.la
   /usr/lib/eog/plugins/reload.eog-plugin
   /usr/lib/eog/plugins/statusbar-date.eog-plugin
-  /usr/lib/libeog.dll.a
-  /usr/lib/libeog.la
-  /usr/lib/pkgconfig/eog.pc
   /usr/share/applications/eog.desktop
-  /usr/share/doc/eog-2.24.2/AUTHORS
-  /usr/share/doc/eog-2.24.2/COPYING
-  /usr/share/doc/eog-2.24.2/ChangeLog
-  /usr/share/doc/eog-2.24.2/HACKING
-  /usr/share/doc/eog-2.24.2/INSTALL
-  /usr/share/doc/eog-2.24.2/MAINTAINERS
-  /usr/share/doc/eog-2.24.2/NEWS
-  /usr/share/doc/eog-2.24.2/README
-  /usr/share/doc/eog-2.24.2/THANKS
-  /usr/share/doc/eog-2.24.2/TODO
+  /usr/share/doc/eog-2.24.3/AUTHORS
+  /usr/share/doc/eog-2.24.3/COPYING
+  /usr/share/doc/eog-2.24.3/ChangeLog
+  /usr/share/doc/eog-2.24.3/HACKING
+  /usr/share/doc/eog-2.24.3/INSTALL
+  /usr/share/doc/eog-2.24.3/MAINTAINERS
+  /usr/share/doc/eog-2.24.3/NEWS
+  /usr/share/doc/eog-2.24.3/README
+  /usr/share/doc/eog-2.24.3/THANKS
+  /usr/share/doc/eog-2.24.3/TODO
   /usr/share/eog/eog-image-properties-dialog.glade
   /usr/share/eog/eog-multiple-save-as-dialog.glade
   /usr/share/eog/eog-preferences-dialog.glade
@@ -226,63 +202,6 @@ Files included in the binary package:
   /usr/share/gnome/help/eog/zh_TW/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/zh_TW/figures/eog_start_window.png
   /usr/share/gnome/help/eog/zh_TW/figures/eog_toolbar_editor_window.png
-  /usr/share/gtk-doc/html/eog/EogApplication.html
-  /usr/share/gtk-doc/html/eog/EogDialog.html
-  /usr/share/gtk-doc/html/eog/EogExifDetails.html
-  /usr/share/gtk-doc/html/eog/EogFileChooser.html
-  /usr/share/gtk-doc/html/eog/EogImage.html
-  /usr/share/gtk-doc/html/eog/EogImageSaveInfo.html
-  /usr/share/gtk-doc/html/eog/EogJobSaveAs.html
-  /usr/share/gtk-doc/html/eog/EogListStore.html
-  /usr/share/gtk-doc/html/eog/EogMessageArea.html
-  /usr/share/gtk-doc/html/eog/EogMetadataReaderJpg.html
-  /usr/share/gtk-doc/html/eog/EogMetadataReaderPng.html
-  /usr/share/gtk-doc/html/eog/EogPixbufCellRenderer.html
-  /usr/share/gtk-doc/html/eog/EogPlugin.html
-  /usr/share/gtk-doc/html/eog/EogPluginManager.html
-  /usr/share/gtk-doc/html/eog/EogPreferencesDialog.html
-  /usr/share/gtk-doc/html/eog/EogPrintImageSetup.html
-  /usr/share/gtk-doc/html/eog/EogPrintPreview.html
-  /usr/share/gtk-doc/html/eog/EogPropertiesDialog.html
-  /usr/share/gtk-doc/html/eog/EogScrollView.html
-  /usr/share/gtk-doc/html/eog/EogSidebar.html
-  /usr/share/gtk-doc/html/eog/EogStatusbar.html
-  /usr/share/gtk-doc/html/eog/EogThumbNav.html
-  /usr/share/gtk-doc/html/eog/EogThumbView.html
-  /usr/share/gtk-doc/html/eog/EogTransform.html
-  /usr/share/gtk-doc/html/eog/EogURIConverter.html
-  /usr/share/gtk-doc/html/eog/EogWindow.html
-  /usr/share/gtk-doc/html/eog/ch01.html
-  /usr/share/gtk-doc/html/eog/ch02.html
-  /usr/share/gtk-doc/html/eog/ch03.html
-  /usr/share/gtk-doc/html/eog/ch04.html
-  /usr/share/gtk-doc/html/eog/ch05.html
-  /usr/share/gtk-doc/html/eog/ch06.html
-  /usr/share/gtk-doc/html/eog/ch07.html
-  /usr/share/gtk-doc/html/eog/eog-eog-config-keys.html
-  /usr/share/gtk-doc/html/eog/eog-eog-debug.html
-  /usr/share/gtk-doc/html/eog/eog-eog-error-message-area.html
-  /usr/share/gtk-doc/html/eog/eog-eog-exif-util.html
-  /usr/share/gtk-doc/html/eog/eog-eog-job-queue.html
-  /usr/share/gtk-doc/html/eog/eog-eog-metadata-reader.html
-  /usr/share/gtk-doc/html/eog/eog-eog-pixbuf-util.html
-  /usr/share/gtk-doc/html/eog/eog-eog-plugin-engine.html
-  /usr/share/gtk-doc/html/eog/eog-eog-print.html
-  /usr/share/gtk-doc/html/eog/eog-eog-save-as-dialog-helper.html
-  /usr/share/gtk-doc/html/eog/eog-eog-session.html
-  /usr/share/gtk-doc/html/eog/eog-eog-thumbnail.html
-  /usr/share/gtk-doc/html/eog/eog-eog-util.html
-  /usr/share/gtk-doc/html/eog/eog-uta.html
-  /usr/share/gtk-doc/html/eog/eog-zoom.html
-  /usr/share/gtk-doc/html/eog/eog.devhelp
-  /usr/share/gtk-doc/html/eog/eog.devhelp2
-  /usr/share/gtk-doc/html/eog/home.png
-  /usr/share/gtk-doc/html/eog/index.html
-  /usr/share/gtk-doc/html/eog/index.sgml
-  /usr/share/gtk-doc/html/eog/left.png
-  /usr/share/gtk-doc/html/eog/right.png
-  /usr/share/gtk-doc/html/eog/style.css
-  /usr/share/gtk-doc/html/eog/up.png
   /usr/share/icons/hicolor/16x16/apps/eog.png
   /usr/share/icons/hicolor/22x22/apps/eog.png
   /usr/share/icons/hicolor/24x24/apps/eog.png
@@ -397,9 +316,97 @@ Files included in the binary package:
   /usr/share/omf/eog/eog-zh_CN.omf
   /usr/share/omf/eog/eog-zh_TW.omf
 
+(eog-devel)
+  /usr/include/eog-2.20/eog/eog-application.h
+  /usr/include/eog-2.20/eog/eog-debug.h
+  /usr/include/eog-2.20/eog/eog-dialog.h
+  /usr/include/eog-2.20/eog/eog-error-message-area.h
+  /usr/include/eog-2.20/eog/eog-exif-details.h
+  /usr/include/eog-2.20/eog/eog-exif-util.h
+  /usr/include/eog-2.20/eog/eog-file-chooser.h
+  /usr/include/eog-2.20/eog/eog-image-save-info.h
+  /usr/include/eog-2.20/eog/eog-image.h
+  /usr/include/eog-2.20/eog/eog-job-queue.h
+  /usr/include/eog-2.20/eog/eog-jobs.h
+  /usr/include/eog-2.20/eog/eog-list-store.h
+  /usr/include/eog-2.20/eog/eog-message-area.h
+  /usr/include/eog-2.20/eog/eog-plugin.h
+  /usr/include/eog-2.20/eog/eog-properties-dialog.h
+  /usr/include/eog-2.20/eog/eog-scroll-view.h
+  /usr/include/eog-2.20/eog/eog-sidebar.h
+  /usr/include/eog-2.20/eog/eog-statusbar.h
+  /usr/include/eog-2.20/eog/eog-thumb-nav.h
+  /usr/include/eog-2.20/eog/eog-thumb-view.h
+  /usr/include/eog-2.20/eog/eog-thumbnail.h
+  /usr/include/eog-2.20/eog/eog-transform.h
+  /usr/include/eog-2.20/eog/eog-window.h
+  /usr/lib/libeog.dll.a
+  /usr/lib/libeog.la
+  /usr/lib/pkgconfig/eog.pc
+  /usr/share/gtk-doc/html/eog/EogApplication.html
+  /usr/share/gtk-doc/html/eog/EogDialog.html
+  /usr/share/gtk-doc/html/eog/EogExifDetails.html
+  /usr/share/gtk-doc/html/eog/EogFileChooser.html
+  /usr/share/gtk-doc/html/eog/EogImage.html
+  /usr/share/gtk-doc/html/eog/EogImageSaveInfo.html
+  /usr/share/gtk-doc/html/eog/EogJobSaveAs.html
+  /usr/share/gtk-doc/html/eog/EogListStore.html
+  /usr/share/gtk-doc/html/eog/EogMessageArea.html
+  /usr/share/gtk-doc/html/eog/EogMetadataReaderJpg.html
+  /usr/share/gtk-doc/html/eog/EogMetadataReaderPng.html
+  /usr/share/gtk-doc/html/eog/EogPixbufCellRenderer.html
+  /usr/share/gtk-doc/html/eog/EogPlugin.html
+  /usr/share/gtk-doc/html/eog/EogPluginManager.html
+  /usr/share/gtk-doc/html/eog/EogPreferencesDialog.html
+  /usr/share/gtk-doc/html/eog/EogPrintImageSetup.html
+  /usr/share/gtk-doc/html/eog/EogPrintPreview.html
+  /usr/share/gtk-doc/html/eog/EogPropertiesDialog.html
+  /usr/share/gtk-doc/html/eog/EogScrollView.html
+  /usr/share/gtk-doc/html/eog/EogSidebar.html
+  /usr/share/gtk-doc/html/eog/EogStatusbar.html
+  /usr/share/gtk-doc/html/eog/EogThumbNav.html
+  /usr/share/gtk-doc/html/eog/EogThumbView.html
+  /usr/share/gtk-doc/html/eog/EogTransform.html
+  /usr/share/gtk-doc/html/eog/EogURIConverter.html
+  /usr/share/gtk-doc/html/eog/EogWindow.html
+  /usr/share/gtk-doc/html/eog/ch01.html
+  /usr/share/gtk-doc/html/eog/ch02.html
+  /usr/share/gtk-doc/html/eog/ch03.html
+  /usr/share/gtk-doc/html/eog/ch04.html
+  /usr/share/gtk-doc/html/eog/ch05.html
+  /usr/share/gtk-doc/html/eog/ch06.html
+  /usr/share/gtk-doc/html/eog/ch07.html
+  /usr/share/gtk-doc/html/eog/eog-eog-config-keys.html
+  /usr/share/gtk-doc/html/eog/eog-eog-debug.html
+  /usr/share/gtk-doc/html/eog/eog-eog-error-message-area.html
+  /usr/share/gtk-doc/html/eog/eog-eog-exif-util.html
+  /usr/share/gtk-doc/html/eog/eog-eog-job-queue.html
+  /usr/share/gtk-doc/html/eog/eog-eog-metadata-reader.html
+  /usr/share/gtk-doc/html/eog/eog-eog-pixbuf-util.html
+  /usr/share/gtk-doc/html/eog/eog-eog-plugin-engine.html
+  /usr/share/gtk-doc/html/eog/eog-eog-print.html
+  /usr/share/gtk-doc/html/eog/eog-eog-save-as-dialog-helper.html
+  /usr/share/gtk-doc/html/eog/eog-eog-session.html
+  /usr/share/gtk-doc/html/eog/eog-eog-thumbnail.html
+  /usr/share/gtk-doc/html/eog/eog-eog-util.html
+  /usr/share/gtk-doc/html/eog/eog-uta.html
+  /usr/share/gtk-doc/html/eog/eog-zoom.html
+  /usr/share/gtk-doc/html/eog/eog.devhelp
+  /usr/share/gtk-doc/html/eog/eog.devhelp2
+  /usr/share/gtk-doc/html/eog/home.png
+  /usr/share/gtk-doc/html/eog/index.html
+  /usr/share/gtk-doc/html/eog/index.sgml
+  /usr/share/gtk-doc/html/eog/left.png
+  /usr/share/gtk-doc/html/eog/right.png
+  /usr/share/gtk-doc/html/eog/style.css
+  /usr/share/gtk-doc/html/eog/up.png
+
 ------------------
 
 Port Notes:
+
+----- version 2.24.3-1 -----
+Version bump.  Created separate -devel package.
 
 ----- version 2.24.2-1 -----
 Version bump for GNOME 2.24.
