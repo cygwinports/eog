@@ -4,46 +4,43 @@ This is the Eye of Gnome, an image viewer program.  It is meant to be a
 fast and functional image viewer as well as an image cataloging program.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libart_lgpl_2_2-2.3.20-2
-  libcairo2-1.8.6-1
-  libdbus-glib_1_2-0.78-1
-  libexempi3-2.1.0-1
-  libexif12-0.6.17-1
-  libgconf2_4-2.24.0-1
-  libgdk_pixbuf2.0_0-2.14.7-1
-  libglade2.0_0-2.6.3-2
-  libglib2.0_0-2.18.4-1
-  libgnome-desktop2_7-2.24.3-1
-  libgnome2_0-2.24.1-1
-  libgnomeui2_0-2.24.0-1
-  libgtk2.0_0-2.14.7-1
-  libintl8-0.17-2
-  libjpeg62-6b-12
+  cygwin-1.7.0-44
+  libart_lgpl_2_2-2.3.20-10
+  libcairo2-1.8.6-10
+  libdbus-glib_1_2-0.80-10
+  libexempi3-2.1.0-10
+  libexif12-0.6.17-10
+  libgcc1-4.3.2-2
+  libgconf2_4-2.26.0-1
+  libgdk_pixbuf2.0_0-2.16.0-1
+  libglib2.0_0-2.20.0-1
+  libgnome-desktop2_11-2.26.0-1
+  libgtk2.0_0-2.16.0-1
+  libintl8-0.17-10
+  libjpeg62-6b-20
   liblcms1-1.17-1
-  libX11_6-1.1.5-2
-  libxml2-2.7.3-1
-  python-2.5.4-1
-  python-gnomevfs2-2.22.3-1
-  python-gobject2-2.16.0-1
-  python-gtk2-2.14.0-1
-  zlib-1.2.3-2
+  libX11_6-1.2-10
+  libxml2-2.7.3-10
+  python-2.5.4-10
+  python-gobject2-2.16.1-10
+  python-gtk2-2.14.1-1
+  zlib0-1.2.3-10
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gnome-common-2.24.0-1
-  gnome-doc-utils-0.14.2-1
-  intltool-0.40.5-1
-  libtool-2.2.6a-1
-  make-3.81-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-4.3.2-2
+  gnome-common-2.26.0-1
+  gnome-doc-utils-0.16.0-1
+  intltool-0.40.6-1
+  libtool-2.2.7a-12
+  make-3.81-2
   pkg-config-0.23a-2
-  rarian-0.8.1-1
+  rarian-0.8.1-10
   sed-4.1.5-2
 
 Canonical homepage:
@@ -55,21 +52,22 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack eog-2.24.3-1-src.tar.bz2
+  unpack eog-2.26.0-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./eog-2.24.3-1.cygport all
+  cygport ./eog-2.26.0-1.cygport all
 
 This will create:
-  /usr/src/eog-2.24.3-1-src.tar.bz2
-  /usr/src/eog-2.24.3-1.tar.bz2
-  /usr/src/eog-devel-2.24.3-1.tar.bz2
+  /usr/src/eog-2.26.0-1-src.tar.bz2
+  /usr/src/eog-2.26.0-1.tar.bz2
+  /usr/src/eog-devel-2.26.0-1.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
+(eog)
   /etc/gconf/schemas/eog.schemas
   /etc/postinstall/eog.sh
   /etc/preremove/eog.sh
@@ -85,19 +83,18 @@ Files included in the binary package:
   /usr/lib/eog/plugins/reload.eog-plugin
   /usr/lib/eog/plugins/statusbar-date.eog-plugin
   /usr/share/applications/eog.desktop
-  /usr/share/doc/eog-2.24.3/AUTHORS
-  /usr/share/doc/eog-2.24.3/COPYING
-  /usr/share/doc/eog-2.24.3/ChangeLog
-  /usr/share/doc/eog-2.24.3/HACKING
-  /usr/share/doc/eog-2.24.3/INSTALL
-  /usr/share/doc/eog-2.24.3/MAINTAINERS
-  /usr/share/doc/eog-2.24.3/NEWS
-  /usr/share/doc/eog-2.24.3/README
-  /usr/share/doc/eog-2.24.3/THANKS
-  /usr/share/doc/eog-2.24.3/TODO
-  /usr/share/eog/eog-image-properties-dialog.glade
-  /usr/share/eog/eog-multiple-save-as-dialog.glade
-  /usr/share/eog/eog-preferences-dialog.glade
+  /usr/share/doc/eog/AUTHORS
+  /usr/share/doc/eog/COPYING
+  /usr/share/doc/eog/ChangeLog
+  /usr/share/doc/eog/HACKING
+  /usr/share/doc/eog/MAINTAINERS
+  /usr/share/doc/eog/NEWS
+  /usr/share/doc/eog/README
+  /usr/share/doc/eog/THANKS
+  /usr/share/doc/eog/TODO
+  /usr/share/eog/eog-image-properties-dialog.ui
+  /usr/share/eog/eog-multiple-save-as-dialog.ui
+  /usr/share/eog/eog-preferences-dialog.ui
   /usr/share/eog/eog-toolbar.xml
   /usr/share/eog/eog-ui.xml
   /usr/share/eog/gtkrc
@@ -174,6 +171,10 @@ Files included in the binary package:
   /usr/share/gnome/help/eog/pa/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/pa/figures/eog_start_window.png
   /usr/share/gnome/help/eog/pa/figures/eog_toolbar_editor_window.png
+  /usr/share/gnome/help/eog/pl/eog.xml
+  /usr/share/gnome/help/eog/pl/figures/eog_save_as_window.png
+  /usr/share/gnome/help/eog/pl/figures/eog_start_window.png
+  /usr/share/gnome/help/eog/pl/figures/eog_toolbar_editor_window.png
   /usr/share/gnome/help/eog/pt_BR/eog.xml
   /usr/share/gnome/help/eog/pt_BR/figures/eog_save_as_window.png
   /usr/share/gnome/help/eog/pt_BR/figures/eog_start_window.png
@@ -252,6 +253,7 @@ Files included in the binary package:
   /usr/share/locale/ku/LC_MESSAGES/eog.mo
   /usr/share/locale/lt/LC_MESSAGES/eog.mo
   /usr/share/locale/lv/LC_MESSAGES/eog.mo
+  /usr/share/locale/mai/LC_MESSAGES/eog.mo
   /usr/share/locale/mg/LC_MESSAGES/eog.mo
   /usr/share/locale/mk/LC_MESSAGES/eog.mo
   /usr/share/locale/ml/LC_MESSAGES/eog.mo
@@ -287,6 +289,8 @@ Files included in the binary package:
   /usr/share/locale/tr/LC_MESSAGES/eog.mo
   /usr/share/locale/ug/LC_MESSAGES/eog.mo
   /usr/share/locale/uk/LC_MESSAGES/eog.mo
+  /usr/share/locale/uz/LC_MESSAGES/eog.mo
+  /usr/share/locale/uz@cyrillic/LC_MESSAGES/eog.mo
   /usr/share/locale/vi/LC_MESSAGES/eog.mo
   /usr/share/locale/wa/LC_MESSAGES/eog.mo
   /usr/share/locale/xh/LC_MESSAGES/eog.mo
@@ -308,6 +312,7 @@ Files included in the binary package:
   /usr/share/omf/eog/eog-ko.omf
   /usr/share/omf/eog/eog-oc.omf
   /usr/share/omf/eog/eog-pa.omf
+  /usr/share/omf/eog/eog-pl.omf
   /usr/share/omf/eog/eog-pt_BR.omf
   /usr/share/omf/eog/eog-ru.omf
   /usr/share/omf/eog/eog-sv.omf
@@ -320,6 +325,7 @@ Files included in the binary package:
   /usr/include/eog-2.20/eog/eog-application.h
   /usr/include/eog-2.20/eog/eog-debug.h
   /usr/include/eog-2.20/eog/eog-dialog.h
+  /usr/include/eog-2.20/eog/eog-enums.h
   /usr/include/eog-2.20/eog/eog-error-message-area.h
   /usr/include/eog-2.20/eog/eog-exif-details.h
   /usr/include/eog-2.20/eog/eog-exif-util.h
@@ -349,7 +355,7 @@ Files included in the binary package:
   /usr/share/gtk-doc/html/eog/EogFileChooser.html
   /usr/share/gtk-doc/html/eog/EogImage.html
   /usr/share/gtk-doc/html/eog/EogImageSaveInfo.html
-  /usr/share/gtk-doc/html/eog/EogJobSaveAs.html
+  /usr/share/gtk-doc/html/eog/EogJobCopy.html
   /usr/share/gtk-doc/html/eog/EogListStore.html
   /usr/share/gtk-doc/html/eog/EogMessageArea.html
   /usr/share/gtk-doc/html/eog/EogMetadataReaderJpg.html
@@ -405,54 +411,8 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 2.24.3-1 -----
-Version bump.  Created separate -devel package.
-
------ version 2.24.2-1 -----
-Version bump for GNOME 2.24.
-
------ version 2.22.3-1 -----
-Version bump.
-
------ version 2.22.2-1 -----
-Version bump for GNOME 2.22.
-
------ version 2.20.4-1 -----
-Version bump.
-
------ version 2.20.3-1 -----
-Version bump for GNOME 2.20.
-
------ version 2.18.2-1 -----
-Version bump for GNOME 2.18.
-
------ version 2.16.3-1 -----
-Version bump.
-
------ version 2.16.2-1 -----
-Version bump for GNOME 2.16.
-
------ version 2.14.3-1 -----
-Version bump.
-
------ version 2.14.2-1 -----
-Version bump.
-
------ version 2.14.1-1 -----
-Version bump for GNOME 2.14.
-
------ version 2.12.3-1 -----
-Version bump.
-
------ version 2.12.2-1 -----
-Version bump for GNOME 2.12.
-Now includes special JPEG, EXIF, and CMS support.
-
------ version 2.10.2-1 -----
-Update for GNOME 2.10.
-
------ version 2.8.2-1 -----
-Initial release for Cygwin.
+----- version 2.26.0-1 -----
+Initial release of GNOME 2.26 for Cygwin 1.7.
 
 
 Cygwin port maintained by:
