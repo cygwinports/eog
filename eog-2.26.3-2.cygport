@@ -2,10 +2,7 @@ inherit gnome2
 
 DESCRIPTION="Eye of GNOME image viewer"
 
-PATCH_URI="
-	2.26-libeog.patch
-	2.22-transupp.patch
-"
+PATCH_URI="2.26-libeog.patch"
 
 PKG_NAMES="${PN} ${PN}-devel"
 PKG_HINTS="setup devel"

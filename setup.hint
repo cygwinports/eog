@@ -1,5 +1,5 @@
 category: Gnome Graphics
-requires: libart_lgpl_2_2 libcairo2 libdbus-glib_1_2 libexempi3 libexif12 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgnome-desktop2_11 libgtk2.0_0 libintl8 libjpeg62 liblcms1 libX11_6 libxml2 python python-gobject2 python-gtk2 zlib0
+requires: libart_lgpl_2_2 libcairo2 libdbus-glib_1_2 libexempi3 libexif12 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgnome-desktop2_11 libgtk2.0_0 libintl8 libjpeg7 liblcms1 libX11_6 libxml2 python python-gobject2 python-gtk2 zlib0
 sdesc: "Eye of GNOME image viewer"
 ldesc: "This is the Eye of Gnome, an image viewer program.  It is meant
 to be a fast and functional image viewer as well as an image cataloging

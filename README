@@ -4,7 +4,7 @@ This is the Eye of Gnome, an image viewer program.  It is meant to be a
 fast and functional image viewer as well as an image cataloging program.
 
 Runtime requirements:
-  cygwin-1.7.0-50
+  cygwin-1.7.0-60
   libart_lgpl_2_2-2.3.20-10
   libcairo2-1.8.8-1
   libdbus-glib_1_2-0.80-10
@@ -12,32 +12,32 @@ Runtime requirements:
   libexif12-0.6.17-10
   libgcc1-4.3.2-2
   libgconf2_4-2.26.2-1
-  libgdk_pixbuf2.0_0-2.16.3-1
-  libglib2.0_0-2.20.4-1
+  libgdk_pixbuf2.0_0-2.16.6-1
+  libglib2.0_0-2.20.5-1
   libgnome-desktop2_11-2.26.3-1
-  libgtk2.0_0-2.16.3-1
+  libgtk2.0_0-2.16.6-1
   libintl8-0.17-11
-  libjpeg62-6b-20
+  libjpeg7-7-10
   liblcms1-1.17-1
-  libX11_6-1.2.1-1
-  libxml2-2.7.3-10
+  libX11_6-1.2.2-1
+  libxml2-2.7.3-11
   python-2.5.4-10
-  python-gobject2-2.16.1-10
-  python-gtk2-2.14.1-1
+  python-gobject2-2.18.0-1
+  python-gtk2-2.16.0-1
   zlib0-1.2.3-10
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
   automake1.10-1.10.2-10
-  binutils-20080624-2
-  cygport-0.9.7-1
+  binutils-2.19.51-1
+  cygport-0.9.9-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
   gnome-common-2.26.0-2
   gnome-doc-utils-0.16.1-2
   intltool-0.40.6-1
-  libtool-2.2.7a-13
+  libtool-2.2.7a-14
   make-3.81-2
   pkg-config-0.23b-10
   rarian-0.8.1-11
@@ -410,6 +410,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.26.3-2 -----
+Rebuilt for jpeg-7.
 
 ----- version 2.26.3-1 -----
 Version bump.
