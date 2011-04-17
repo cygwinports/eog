@@ -1,0 +1,63 @@
+--- origsrc/eog-3.0.0/data/eog.pc.in	2011-03-24 13:21:25.000000000 -0500
++++ src/eog-3.0.0/data/eog.pc.in	2011-04-17 00:56:38.994271400 -0500
+@@ -9,3 +9,4 @@ Description: The GNOME Image Viewer
+ Requires: gtk+-3.0
+ Version: @VERSION@
+ Cflags: -I${includedir}
++Libs: -L${libdir} -leog
+--- origsrc/eog-3.0.0/plugins/Makefile.am	2011-03-24 13:21:25.000000000 -0500
++++ src/eog-3.0.0/plugins/Makefile.am	2011-04-17 00:57:19.741542400 -0500
+@@ -8,7 +8,7 @@ INCLUDES = \
+ 	$(WARN_CFLAGS)					\
+ 	-DEOG_LOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\"
+ 
+-AM_LDFLAGS = -avoid-version -module
++AM_LDFLAGS = -avoid-version -module -no-undefined -Wl,$(top_builddir)/src/libeog.a
+ 
+ plugins_LTLIBRARIES = \
+ 	fullscreen/libfullscreen.la  \
+--- origsrc/eog-3.0.0/src/Makefile.am	2011-03-24 13:21:26.000000000 -0500
++++ src/eog-3.0.0/src/Makefile.am	2011-04-17 01:09:28.057566300 -0500
+@@ -169,14 +169,15 @@ eog_CFLAGS = 							\
+ 
+ eog_LDADD = 				\
+ 	libeog.la			\
+-	$(EOG_LIBS)			\
+-	$(LIBJPEG)			\
+ 	$(toolbar_LIB)			\
+ 	$(screensaver_LIB)		\
+ 	$(jpeg_LIB)			\
++	$(LIBJPEG)			\
++	$(EOG_LIBS)			\
+ 	$(INTROSPECTION_LIBS)
+ 
+ eog_LDFLAGS = -export-dynamic -no-undefined -export-symbols-regex "^[[^_]].*"
++eog_LDFLAGS += -Wl,--out-implib,libeog.a
+ 
+ BUILT_SOURCES = 			\
+ 	eog-enum-types.c		\
+@@ -218,11 +219,11 @@ if HAVE_INTROSPECTION
+ INTROSPECTION_GIRS = Eog-3.0.gir
+ INTROSPECTION_SCANNER_ARGS = -I$(top_srcdir) --warn-all $(libeog_la_CPPFLAGS)
+ 
+-Eog-3.0.gir: eog
++Eog-3.0.gir: eog$(EXEEXT)
+ Eog_3_0_gir_INCLUDES = Gtk-3.0
+ Eog_3_0_gir_FILES = $(INST_H_FILES) $(libeog_c_files) $(BUILT_SOURCES)
+ Eog_3_0_gir_VERSION = 3.0
+-Eog_3_0_gir_PROGRAM = $(builddir)/eog
++Eog_3_0_gir_PROGRAM = $(builddir)/eog$(EXEEXT)
+ Eog_3_0_gir_NAMESPACE = Eog
+ Eog_3_0_gir_CFLAGS = $(EOG_CFLAGS)
+ girdir = $(datadir)/eog/gir-1.0
+@@ -234,6 +235,10 @@ typelib_DATA = $(INTROSPECTION_GIRS:.gir
+ CLEANFILES += $(gir_DATA) $(typelib_DATA)
+ endif
+ 
++install-exec-local:
++	$(MKDIR_P) $(DESTDIR)$(libdir)
++	$(INSTALL_DATA) libeog.a $(DESTDIR)$(libdir)/libeog.a
++
+ dist-hook:
+ 	cd $(distdir); rm -f $(BUILT_SOURCES)
+ 
