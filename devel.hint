@@ -1,5 +1,5 @@
 category: Gnome Graphics
-requires: eog libexempi-devel libexif-devel libglib2.0-devel libgtk3-devel liblcms-devel libpeas1.0-devel librsvg2-devel
+requires: eog libexempi-devel libexif-devel libglib2.0-devel libgtk3-devel liblcms2-devel libpeas1.0-devel librsvg2-devel
 external-source: eog
 sdesc: "Eye of GNOME image viewer (plugin development)"
 ldesc: "This is the Eye of Gnome, an image viewer program.  It is meant
