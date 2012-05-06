@@ -17,3 +17,5 @@ PKG_NAMES="${PN} ${PN}-devel"
 PKG_HINTS="setup devel"
 eog_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/eog/ usr/share/"
 eog_devel_CONTENTS="usr/include/ usr/lib/libeog.a usr/lib/pkgconfig/ usr/share/gtk-doc/"
+
+KEEP_LA_FILES="none"
