@@ -1,6 +1,0 @@
-category: Gnome Graphics
-requires: libatk1.0_0 libcairo2 libexempi3 libexif12 libgdk_pixbuf2.0_0 libgirepository1.0_1 libglib2.0_0 libgnome-desktop3_2 libgtk3_0 libintl8 libjpeg8 liblcms2_2 libpeas1.0_0 librsvg2_2 libX11_6 libxml2 zlib0
-sdesc: "Eye of GNOME image viewer"
-ldesc: "This is the Eye of Gnome, an image viewer program.  It is meant
-to be a fast and functional image viewer as well as an image cataloging
-program."
