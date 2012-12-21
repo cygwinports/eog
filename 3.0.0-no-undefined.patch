@@ -5,6 +5,21 @@
  Version: @VERSION@
  Cflags: -I${includedir}
 +Libs: -L${libdir} -leog
+--- origsrc/eog-3.6.2/doc/reference/Makefile.am	2012-11-12 12:04:26.000000000 -0600
++++ src/eog-3.6.2/doc/reference/Makefile.am	2012-12-21 00:15:37.631837000 -0600
+@@ -99,11 +99,11 @@ GTKDOC_LIBS=\
+ 	$(top_builddir)/src/libeog.la 	\
+ 	$(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la \
+ 	$(top_builddir)/cut-n-paste/totem-screensaver/libtotemscrsaver.la \
++	$(jpeg_LIB)			\
+ 	$(BINDING_LIBS)			\
+ 	$(LIBJPEG)			\
+ 	$(X_LIBS)			\
+ 	$(EOG_LIBS)			\
+-	$(jpeg_LIB)			\
+ 	$(MORE_GTKDOC_LIBS)
+ 
+ # This includes the standard gtk-doc make rules, copied by gtkdocize.
 --- origsrc/eog-3.0.0/plugins/Makefile.am	2011-03-24 13:21:25.000000000 -0500
 +++ src/eog-3.0.0/plugins/Makefile.am	2011-04-17 00:57:19.741542400 -0500
 @@ -8,7 +8,7 @@ INCLUDES = \
@@ -31,7 +46,7 @@
 +	$(EOG_LIBS)			\
  	$(INTROSPECTION_LIBS)
  
- eog_LDFLAGS = -export-dynamic -no-undefined -export-symbols-regex "^[[^_]].*"
+ eog_LDFLAGS = -export-dynamic -no-undefined
 +eog_LDFLAGS += -Wl,--out-implib,libeog.a
  
  BUILT_SOURCES = 			\

@@ -1,6 +1,9 @@
 inherit gnome2
 
-CATEGORY="Gnome Graphics"
+NAME="eog"
+VERSION=3.6.2
+RELEASE=1
+CATEGORY="GNOME Graphics"
 SUMMARY="Eye of GNOME image viewer"
 DESCRIPTION="This is the Eye of Gnome, an image viewer program.  It is meant
 to be a fast and functional image viewer as well as an image cataloging
@@ -22,5 +25,3 @@ eog_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/eog/ usr/share/"
 eog_devel_SUMMARY="${SUMMARY} (plugin development)"
 eog_devel_REQUIRES="libexempi-devel libexif-devel liblcms2-devel librsvg2-devel"
 eog_devel_CONTENTS="usr/include/ usr/lib/libeog.a usr/lib/pkgconfig/ usr/share/gtk-doc/"
-
-KEEP_LA_FILES="none"
