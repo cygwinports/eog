@@ -7,10 +7,10 @@
 +Libs: -L${libdir} -leog
 --- origsrc/eog-3.6.2/doc/reference/Makefile.am	2012-11-12 12:04:26.000000000 -0600
 +++ src/eog-3.6.2/doc/reference/Makefile.am	2012-12-21 00:15:37.631837000 -0600
-@@ -99,11 +99,11 @@ GTKDOC_LIBS=\
+@@ -99,11 +99,11 @@
+ GTKDOC_LIBS=\
  	$(top_builddir)/src/libeog.la 	\
  	$(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la \
- 	$(top_builddir)/cut-n-paste/totem-screensaver/libtotemscrsaver.la \
 +	$(jpeg_LIB)			\
  	$(BINDING_LIBS)			\
  	$(LIBJPEG)			\
@@ -27,27 +27,26 @@
  	-DEOG_LOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\"
  
 -AM_LDFLAGS = -avoid-version -module
-+AM_LDFLAGS = -avoid-version -module -no-undefined -Wl,$(top_builddir)/src/libeog.a
++AM_LDFLAGS = -avoid-version -module -no-undefined -Wl,$(top_builddir)/src/libeog.dll.a
  
  plugins_LTLIBRARIES = \
  	fullscreen/libfullscreen.la  \
 --- origsrc/eog-3.0.0/src/Makefile.am	2011-03-24 13:21:26.000000000 -0500
 +++ src/eog-3.0.0/src/Makefile.am	2011-04-17 01:09:28.057566300 -0500
-@@ -169,14 +169,15 @@ eog_CFLAGS = 							\
+@@ -169,13 +169,14 @@ eog_CFLAGS = 							\
  
  eog_LDADD = 				\
  	libeog.la			\
 -	$(EOG_LIBS)			\
 -	$(LIBJPEG)			\
  	$(toolbar_LIB)			\
- 	$(screensaver_LIB)		\
  	$(jpeg_LIB)			\
 +	$(LIBJPEG)			\
 +	$(EOG_LIBS)			\
  	$(INTROSPECTION_LIBS)
  
  eog_LDFLAGS = -export-dynamic -no-undefined
-+eog_LDFLAGS += -Wl,--out-implib,libeog.a
++eog_LDFLAGS += -Wl,--out-implib,libeog.dll.a
  
  BUILT_SOURCES = 			\
  	eog-enum-types.c		\
@@ -71,7 +70,7 @@
  
 +install-exec-local:
 +	$(MKDIR_P) $(DESTDIR)$(libdir)
-+	$(INSTALL_DATA) libeog.a $(DESTDIR)$(libdir)/libeog.a
++	$(INSTALL_DATA) libeog.dll.a $(DESTDIR)$(libdir)/libeog.dll.a
 +
  dist-hook:
  	cd $(distdir); rm -f $(BUILT_SOURCES)
