@@ -1,0 +1,55 @@
+--- origsrc/eog-3.14.3/data/eog.pc.in	2013-07-13 09:19:19.000000000 -0500
++++ src/eog-3.14.3/data/eog.pc.in	2015-01-07 11:09:56.905488800 -0600
+@@ -9,3 +9,4 @@ Description: The GNOME Image Viewer
+ Requires: gtk+-3.0
+ Version: @VERSION@
+ Cflags: -I${includedir}
++Libs: -L${libdir}/eog -leog
+--- origsrc/eog-3.14.3/doc/reference/Makefile.am	2014-11-19 13:50:55.000000000 -0600
++++ src/eog-3.14.3/doc/reference/Makefile.am	2015-01-07 11:14:21.495087400 -0600
+@@ -110,18 +110,12 @@ GTKDOC_CFLAGS= \
+ 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
+ 	$(EOG_CFLAGS)
+ 
+-if ENABLE_JPEG
+-jpeg_LIB = $(top_builddir)/jpegutils/libeog-jpegutils.la
+-endif
+-
+ GTKDOC_LIBS=\
+ 	$(top_builddir)/src/libeog.la 	\
+-	$(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la \
+ 	$(BINDING_LIBS)			\
+ 	$(LIBJPEG)			\
+ 	$(X_LIBS)			\
+ 	$(EOG_LIBS)			\
+-	$(jpeg_LIB)			\
+ 	$(MORE_GTKDOC_LIBS)
+ 
+ # This includes the standard gtk-doc make rules, copied by gtkdocize.
+--- origsrc/eog-3.14.3/plugins/Makefile.am	2014-05-12 16:02:57.000000000 -0500
++++ src/eog-3.14.3/plugins/Makefile.am	2015-01-07 11:11:39.040958300 -0600
+@@ -8,7 +8,7 @@ AM_CPPFLAGS = \
+ 	$(WARN_CFLAGS)					\
+ 	-DEOG_LOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\"
+ 
+-AM_LDFLAGS = -avoid-version -module
++AM_LDFLAGS = -avoid-version -module -no-undefined
+ 
+ plugins_LTLIBRARIES = \
+ 	fullscreen/libfullscreen.la  \
+--- origsrc/eog-3.14.3/src/Makefile.am	2014-05-12 16:02:57.000000000 -0500
++++ src/eog-3.14.3/src/Makefile.am	2015-01-07 11:12:47.056595200 -0600
+@@ -215,11 +215,11 @@ if HAVE_INTROSPECTION
+ INTROSPECTION_GIRS = Eog-3.0.gir
+ INTROSPECTION_SCANNER_ARGS = -I$(top_srcdir) --warn-all $(libeog_la_CPPFLAGS)
+ 
+-Eog-3.0.gir: eog
++Eog-3.0.gir: libeog.la
+ Eog_3_0_gir_INCLUDES = Gtk-3.0
+ Eog_3_0_gir_FILES = $(INST_H_FILES) $(libeog_c_files) $(BUILT_SOURCES)
+ Eog_3_0_gir_VERSION = 3.0
+-Eog_3_0_gir_PROGRAM = $(builddir)/eog
++Eog_3_0_gir_LIBS = libeog.la
+ Eog_3_0_gir_NAMESPACE = Eog
+ Eog_3_0_gir_CFLAGS = $(EOG_CFLAGS)
+ girdir = $(datadir)/eog/gir-1.0

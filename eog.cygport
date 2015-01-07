@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="eog"
-VERSION=3.10.2
+VERSION=3.14.3
 RELEASE=1
 CATEGORY="GNOME Graphics"
 SUMMARY="Eye of GNOME image viewer"
@@ -9,7 +9,7 @@ DESCRIPTION="This is the Eye of Gnome, an image viewer program.  It is meant
 to be a fast and functional image viewer as well as an image cataloging
 program."
 
-PATCH_URI="3.0.0-no-undefined.patch"
+PATCH_URI="3.14.3-no-undefined.patch"
 
 DEPEND="gnome-common gnome-doc-utils intltool
 	pkgconfig(exempi-2.0)
@@ -21,9 +21,9 @@ DEPEND="gnome-common gnome-doc-utils intltool
 	pkgconfig(librsvg-2.0)"
 
 PKG_NAMES="eog eog-devel eog-doc"
-eog_CONTENTS="--exclude=gtk-doc etc/ usr/bin/ usr/lib/eog/ usr/share/"
+eog_CONTENTS="--exclude=gtk-doc --exclude=libeog.* etc/ usr/bin/ usr/lib/eog/ usr/share/"
 eog_devel_SUMMARY="${SUMMARY} (plugin development)"
 eog_devel_REQUIRES="libexempi-devel libexif-devel liblcms2-devel librsvg2-devel"
-eog_devel_CONTENTS="usr/include/ usr/lib/libeog.dll.a usr/lib/pkgconfig/"
+eog_devel_CONTENTS="usr/include/ usr/lib/eog/libeog.dll.a usr/lib/pkgconfig/"
 eog_doc_CATEGORY="Doc"
 eog_doc_CONTENTS="usr/share/gtk-doc/"
