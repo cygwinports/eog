@@ -7,8 +7,8 @@
 +Libs: -L${libdir}/eog -leog
 --- origsrc/eog-3.14.3/doc/reference/Makefile.am	2014-11-19 13:50:55.000000000 -0600
 +++ src/eog-3.14.3/doc/reference/Makefile.am	2015-01-07 11:14:21.495087400 -0600
-@@ -110,18 +110,12 @@ GTKDOC_CFLAGS= \
- 	-I$(top_srcdir)/cut-n-paste/toolbar-editor		\
+@@ -110,17 +110,12 @@ GTKDOC_CFLAGS= \
+ 	-I$(top_srcdir)/jpegutils				\
  	$(EOG_CFLAGS)
  
 -if ENABLE_JPEG
@@ -17,7 +17,6 @@
 -
  GTKDOC_LIBS=\
  	$(top_builddir)/src/libeog.la 	\
--	$(top_builddir)/cut-n-paste/toolbar-editor/libtoolbareditor.la \
  	$(BINDING_LIBS)			\
  	$(LIBJPEG)			\
  	$(X_LIBS)			\
